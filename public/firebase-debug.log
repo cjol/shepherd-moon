@@ -1,0 +1,24 @@
+[debug] [2017-10-18T11:34:03.115Z] ----------------------------------------------------------------------
+[debug] [2017-10-18T11:34:03.116Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\JacobSavage\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-10-18T11:34:03.116Z] CLI Version:   3.13.1
+[debug] [2017-10-18T11:34:03.116Z] Platform:      win32
+[debug] [2017-10-18T11:34:03.116Z] Node Version:  v8.6.0
+[debug] [2017-10-18T11:34:03.117Z] Time:          Wed Oct 18 2017 12:34:03 GMT+0100 (GMT Summer Time)
+[debug] [2017-10-18T11:34:03.117Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-18T11:34:03.124Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-18T11:34:03.125Z] > authorizing via signed-in user
+[debug] [2017-10-18T11:34:03.126Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/yachtshepherdmoon-47bbf  
+ Wed Oct 18 2017 12:34:03 GMT+0100 (GMT Summer Time)
+[debug] [2017-10-18T11:34:05.127Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-18T11:34:05.127Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/yachtshepherdmoon-47bbf/tokens  
+ Wed Oct 18 2017 12:34:05 GMT+0100 (GMT Summer Time)
+[debug] [2017-10-18T11:34:06.313Z] <<< HTTP RESPONSE 200
+[info] 1
+[info] 
+[info] === Deploying to 'yachtshepherdmoon-47bbf'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2017-10-18T11:34:11.816Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/yachtshepherdmoon-47bbf/uploads/-KwjFkq0kd8cdspbwmGa?fileCount=121&message=  
+ Wed Oct 18 2017 12:34:11 GMT+0100 (GMT Summer Time)

@@ -1,0 +1,71 @@
+.input-group
+  display: flex
+  width: 100%
+  .form-control
+    padding: .5em .6em
+    display: inline-block
+    border: 2px solid $lighter-color
+    border-radius: .5em
+    box-sizing: border-box
+    vertical-align: middle
+    position: relative
+    z-index: 2
+    flex: 3 3 auto
+    width: 1%
+    font-size: 1rem
+    margin-bottom: 0
+    margin-right: -2px
+    transition: border-color ease-in-out .3s
+    padding-right: 2.25rem
+    background-repeat: no-repeat
+    background-position: center right .5625rem
+    background-size: 1.125rem 1.125rem 
+
+    &:focus
+      border-color: $light-color
+    &:valid
+      border-color: #5cb85c
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E")
+    &:invalid:not(:focus):not(:placeholder-shown)
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E")
+      border-color: #d9534f
+
+    &:not(:last-child)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+
+  .input-group-btn
+    border-radius: .5em
+    position: relative
+    flex: 1 1 0%
+    font-weight: 500
+    padding: .5em 1rem
+    font-size: 1rem
+    z-index: 4
+    background-color: $lighter-color
+    border: 2px solid $tone-color
+    color: $shade-color
+    transition: all ease-in-out .3s
+    &:hover
+      color: $lightest-color
+      background-color: $main-color
+      border-color: $shade-color
+    &:not(:first-child)
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+    &:not(:last-child)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+  .input-group-txt
+    @extend .input-group-btn
+    background-color: white
+    color: $main-color
+    &:hover
+      background-color: white
+      color: $main-color
+  a.input-group-btn
+    text-decoration: none
+    color: $shade-color
+    &:hover
+      text-decoration: none
+      color: $lightest-color

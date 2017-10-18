@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+    
+
+<article>
+    <div class="grid">
+    <!-- A wrapper for all the blog posts -->
+    {{ range ( shuffle .Pages) }}
+        <div class='grid-item {{if .Params.portrait}} gallery-portrait {{else}} gallery-landscape{{end}} {{if isset .Params "rotate" }} image-rotate-{{ .Params.rotate}} {{ end }} {{ if isset .Params "size" }} grid-item-{{ .Params.size}} {{end}}'>
+            <img src="{{ .Params.path }}">
+        </div>
+    {{ end }}
+</article>
+
+{{ partial "footer.html" . }}
+{{ partial "analytics.html" . }}
+</body>
+</html>

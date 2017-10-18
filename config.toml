@@ -1,0 +1,11 @@
+baseurl = "http://www.yachtshepherdmoon.com"
+languageCode = "en-gb"
+title = "Yacht Shepherd Moon"
+Paginate = 3
+
+
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"

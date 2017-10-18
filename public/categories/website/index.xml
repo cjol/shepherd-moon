@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on Yacht Shepherd Moon</title>
+    <link>http://www.yachtshepherdmoon.com/categories/website/</link>
+    <description>Recent content in Website on Yacht Shepherd Moon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 24 Aug 2017 13:28:11 +0100</lastBuildDate>
+    
+	<atom:link href="http://www.yachtshepherdmoon.com/categories/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.yachtshepherdmoon.com/posts/my-seventh-post/</link>
+      <pubDate>Thu, 24 Aug 2017 13:28:11 +0100</pubDate>
+      
+      <guid>http://www.yachtshepherdmoon.com/posts/my-seventh-post/</guid>
+      <description>OK, so images can get quite complicated as we have a few variables to work with! For example the image below has had a caption entered in the WordPress image upload dialog box, this creates a [caption] shortcode which then in turn wraps the whole thing in a div with inline styling! Maybe one day they&#39;ll be able to use the figure and figcaption elements for all this. Additionally, images can be wrapped in links which, if you&#39;re using anything other than color or text-decoration to style your links can be problematic.</description>
+    </item>
+    
+  </channel>
+</rss>
