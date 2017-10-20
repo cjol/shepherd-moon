@@ -74,7 +74,8 @@ a {
   left: 0;
   right: 0;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  max-width: 1000px; }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
@@ -111,9 +112,10 @@ a {
   padding: 0 1em; }
 
 .bodyImage {
-  image-orientation: 90deg; }
+  height: 300px; }
 
 .content-wrapper {
+  background: #edeff3;
   position: absolute;
   top: 80%;
   width: 100%;
@@ -121,10 +123,9 @@ a {
   z-index: 2; }
 
 .content {
-  padding: 1em 1em 3em; }
-
-.white-ribbon {
-  background: #edeff3; }
+  padding: 1em 1em 3em;
+  max-width: 2000px;
+  margin: 0 auto; }
 
 .content-head {
   font-weight: 700;
@@ -168,6 +169,12 @@ a {
   position: fixed;
   bottom: 0;
   width: 100%; }
+
+#map {
+  width: 100%;
+  margin-top: 10px;
+  height: 70vh;
+  background: transparent url(/imgs/loader.svg) no-repeat center center; }
 
 @media (min-width: 48em) {
   font-size: 16px;

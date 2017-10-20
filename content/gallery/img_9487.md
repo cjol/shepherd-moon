@@ -1,0 +1,10 @@
+---
+title: "Shepherd Moon in Hamble"
+draft: false
+path: "/imgs/gallery/img_8474.jpg"
+description: "Shepherd Moon sitting peacefully moored up in Mercury marina before her Biscay crossing."
+date: 2017-08-07T15:05:00+01:00
+location: [50.87081111, -1.31027778]
+portrait: true
+rotate: 90
+---

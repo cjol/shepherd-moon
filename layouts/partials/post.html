@@ -1,4 +1,4 @@
-<section class="post {{ if .IsPage }}post-single{{else}}post-group{{end}}">
+<section class="post-group">
     {{ partial "authorphoto.html" . }}
     <div class="post-detail post-date">
         <span class="post-detail-text">
@@ -12,7 +12,7 @@
         {{ if isset .Params "categories" }}
             {{ $baseUrl := .Site.BaseURL }}
             {{ range .Params.categories }}
-                <a class="badge badge-pill" href="{{ $baseUrl }}/categories/{{ . | urlize }}">
+                <a class="badge badge-pill" href="/categories/{{ . | urlize }}">
                     <i class="icon-tag"></i> {{ . }}
                 </a> 
             {{ end }}
@@ -26,7 +26,7 @@
 
     <div class="post-content">
         {{ if isset .Params "description" }}
-            <em class="post-description">{{ .Params.description }}</em>
+            <em class="post-description is-center">{{ .Params.description }}</em>
             <br/>
         {{ end }}
         {{ .Summary }}

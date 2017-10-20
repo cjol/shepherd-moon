@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+    
+<article>
+	<header>
+	    <h1 class="is-center"> All {{ pluralize .Data.Singular }}</h1>
+    </header>
+    <!-- A wrapper for all the blog posts -->
+<ul>
+  {{ $data := .Data }}
+  {{ range $key, $value := .Data.Terms.ByCount }}
+  <li><a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> <span class="badge-pill">{{ $value.Count }} </span></li>
+  {{ end }}
+</ul>
+    <footer>
+    {{ partial "pagination.html" . }}
+    </footer>
+</article>
+
+{{ partial "footer.html" . }}
+{{ partial "analytics.html" . }}
+</body>
+</html>

@@ -217,7 +217,7 @@ $('#wave3').wavify({
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Las Palmas</h1>'+
       '<div id="bodyContent">'+
-      '<img class="bodyImage" src="/imgs/gallery/IMG_9514.JPG"></img>' +
+      '<img class="bodyImage" src="/imgs/gallery/img_9514.jpg"></img>' +
       '</div>'+
       '</div>';
 
@@ -292,8 +292,7 @@ $('#wave3').wavify({
 
   firebase.initializeApp(config);
 
-
-  var mapElement = $('#map');
   initTabMap();
+  
   
 })();

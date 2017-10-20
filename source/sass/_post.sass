@@ -8,96 +8,94 @@ section.post-group
   grid-template-rows: auto auto auto auto auto auto
   grid-template-areas: "title title title title" "author date date location" "catagories catagories catagories catagories" "divider divider divider divider" "content content content content" ". continue continue continue"
   justify-items: center
-  background-color: white
+
   margin-bottom: 1em
-  box-shadow: 0px 5px 0 0 $lighter-color
 
-section.post-single
-  @extend section.post-group
-  
 
-.divider
-  grid-area: divider
-  -ms-grid-area: divider
-  justify-self: stretch
-  align-self: stretch
-  background-image: url(/imgs/wavey-border-horizontal.png)
-  background-repeat: repeat-x
-  background-size: contain
-  height: 1em
-.post-detail
-  text-align: center
-  font-size: 70%
-  color: $lighter-color
-  padding: 0.35em 0
-  background-color: $shade-color
-  justify-self: stretch
-  a
-    text-decoration: none
-    color: inherit
-    &:hover
-      text-decoration: dotted
-  &.post-catagories
+
+
+  .divider
+    grid-area: divider
+    -ms-grid-area: divider
+    justify-self: stretch
+    align-self: stretch
+    background-image: url(/imgs/wavey-border-horizontal.png)
+    background-repeat: repeat-x
+    background-size: contain
+    height: 1em
+  .post-detail
+    text-align: center
+    font-size: 70%
     color: $lighter-color
-
-.post-title
-  -ms-grid-area: title
-  grid-area: title
-  background-color: $shade-color
-  justify-self: stretch
-  text-align: center
-  a
-    text-decoration: none
-    &:hover
-      text-decoration: dotted
-  h2
-    margin: 0
-    font-size: 2em
-    color: $lighter-color
-
-
-
-.post-author
-  -ms-grid-area: author
-  grid-area: author
-  
-  a
-    .author-img
-      display: none
-.post-date
-  grid-area: date
-  text-align: center
-
-.post-location
-  grid-area: location
-  text-align: center
-
-.post-location-text
-  display: none
-
-.post-catagories
-  grid-area: catagories
-
-.post-content
-  grid-area: content
-
-.post-continue
-  grid-area: continue
-  justify-self: right
-  padding-right: 1em
-  a
-    padding: 0.3em 0.5em
-    border-radius: 1em
-    font-size: 80%
-    box-shadow: inset 0 0 0 0 $s-tone-color
-    transition: all ease 0.7s
-    text-decoration: none
-    color: $secondary-color
-    &:focus, &:hover
-      box-shadow: inset -12em 0 0 0 $s-tone-color
-      color: $lightest-color
-      font-weight: normal
+    padding: 0.35em 0
+    background-color: $shade-color
+    justify-self: stretch
+    a
       text-decoration: none
+      color: inherit
+      &:hover
+        text-decoration: dotted
+    &.post-catagories
+      color: $lighter-color
+
+  .post-title
+    -ms-grid-area: title
+    grid-area: title
+    background-color: $shade-color
+    justify-self: stretch
+    text-align: center
+    a
+      text-decoration: none
+      &:hover
+        text-decoration: dotted
+    h2
+      margin: 0
+      padding: 0.25em 0.5em
+      color: $lighter-color
+
+
+
+  .post-author
+    -ms-grid-area: author
+    grid-area: author
+    
+    a
+      .author-img
+        display: none
+  .post-date
+    grid-area: date
+    text-align: center
+
+  .post-location
+    grid-area: location
+    text-align: center
+
+  .post-location-text
+    display: none
+
+  .post-catagories
+    grid-area: catagories
+
+  .post-content
+    grid-area: content
+
+  .post-continue
+    grid-area: continue
+    justify-self: right
+    padding-right: 1em
+    a
+      padding: 0.3em 0.5em
+      border-radius: 1em
+      font-size: 80%
+      box-shadow: inset 0 0 0 0 $s-tone-color
+      transition: all ease 0.7s
+      text-decoration: none
+      color: $secondary-color
+      &:focus, &:hover
+        box-shadow: inset -12em 0 0 0 $s-tone-color
+        color: $lightest-color
+        font-weight: normal
+        text-decoration: none
 
 
 
@@ -106,7 +104,7 @@ section.post-single
 //@media screen and (min-width: 24em)
 
 @media screen and (min-width: 48em)
-  section.post
+  section.post-group
     background-color: lighten($lightest-color, 50%)
     grid-template-columns: 12em 1em 1fr 1fr
     grid-template-rows: auto auto auto auto auto auto
@@ -115,43 +113,61 @@ section.post-single
     width: auto
     box-shadow: 5px 5px 0 0 $lighter-color
 
-  .post-author
-    a .author-img
-      display: block
-      opacity: 1
-      border: 0.3em dotted rgba(255,255,255,0.6)
-      border-radius: 50%
-      width: 8em
-      margin: 0 auto 0.5em
+    .post-author
+      a .author-img
+        display: block
+        opacity: 1
+        border: 0.3em dotted rgba(255,255,255,0.6)
+        border-radius: 50%
+        width: 8em
+        margin: 0 auto 0.5em
 
-  .post-detail
-    padding: 0.35em 0
-    background-color: $shade-color
-    justify-self: stretch
+    .post-detail
+      padding: 0.35em 0
+      background-color: $shade-color
+      justify-self: stretch
 
-  .post-title
-    justify-self: left
-    padding-left: 1em
-    background-color: white
-    h2
-        color: $tone-color
+    .post-title
+      justify-self: left
+      padding-left: 1em
+      background-color: white
+      h2
+          color: $tone-color
 
-  .post-content
-    padding-left: 1em
+    .post-content
+      padding-left: 1em
 
-  .post-continue
-    padding-bottom: 1em
-    a
-      font-size: 100%
-    
-  .divider
-    background-image: url(/imgs/wavey-border.png)
-    background-repeat: repeat-y
-    height: auto
+    .post-continue
+      padding-bottom: 1em
+      a
+        font-size: 100%
+      
+    .divider
+      background-image: url(/imgs/wavey-border.png)
+      background-repeat: repeat-y
+      height: auto
 /* Large < */
 // @media screen and (min-width: 64em)
 
 /* X-Large < */
 @media screen and (min-width: 80em)
-  section.post
+  section.post-group
     margin: 2em 15%
+
+
+.post-single
+  padding: 0 1em
+  
+  img
+    max-width: calc(100vw - 3em)
+    height: auto
+
+  > .post-title
+    font-size: 3rem
+    font-weight: 900
+
+  > .post-description
+    font-style: italic
+
+  > .post-content
+    text-align: justify

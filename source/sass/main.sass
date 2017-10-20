@@ -37,18 +37,19 @@ html, button, input, select, textarea, h2, .pure-g [class*="pure-u"]
   color: $tone-color
 
 article
-  margin-top: 70px
+  margin-top: 110px
   
-
+article.no-margin
+  margin-top: 70px
 a
-  text-decoration: underline wavy
+  text-decoration: underline solid
   color: $shade-color
   &:hover
     color: $tone-color
   &:visited
-    color: $s-shade-color
+    color: darker($shade-color, 30%)
     &:hover
-      color: $s-tone-color
+      color: $tone-color
 
 .pure-img-responsive
   max-width: 100%
@@ -89,6 +90,7 @@ a
   right: 0
   text-align: center
   text-transform: uppercase
+  max-width: 1000px
 
 /* This is the main heading that appears on the blue section */
 
@@ -127,10 +129,11 @@ a
   padding: 0 1em
 
 .bodyImage
-  image-orientation: 90deg
+  height: 300px
+
 
 .content-wrapper
- 
+  background: $lightest-color
   position: absolute
   top: 80%
   width: 100%
@@ -139,9 +142,11 @@ a
 
 .content
   padding: 1em 1em 3em
+  max-width: 2000px
+  margin: 0 auto
 
 .white-ribbon
-  background: $lightest-color
+  
 
 .content-head
   font-weight: 700
@@ -187,6 +192,11 @@ a
   bottom: 0
   width: 100%
 
+#map 
+  width: 100%
+  margin-top: 10px
+  height: 70vh
+  background: transparent url(/imgs/loader.svg) no-repeat center center
 
 @media (min-width: 48em)
   font-size: 16px

@@ -3,14 +3,13 @@
     <a href="{{.Site.BaseURL }}">
       <img class="nav-logo" alt="" src="/imgs/stamp-logo.png">
       <img class="nav-text-logo" alt="Shepherd Moon" src="/imgs/text-logo.png">
-      <div class="nav-text">Yacht Shephered Moon</div>
+      <div class="nav-text">Yacht Shepherd Moon</div>
     </a>
   </div>
   
   <ul class="nav-bar">
     <li><a href="/">About</a></li>
-    <li><a href="/gallery">Gallery</a></li>
+    <li class="{{ if eq .Section "gallery"}}page-active{{end}}"><a href="/gallery">Gallery</a></li>
     <li class="{{ if eq .Section "posts"}}page-active{{end}}"><a href="/posts">Blog</a></li>
-    <li><a href="/contact">Contact</a></li>
   </ul> 
 </nav>

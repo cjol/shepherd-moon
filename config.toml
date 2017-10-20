@@ -6,6 +6,5 @@ Paginate = 3
 
 
 [taxonomies]
-  tag = "tags"
   category = "categories"
-  series = "series"
+  author = "author"
