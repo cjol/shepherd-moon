@@ -291,7 +291,7 @@ $('#wave3').wavify({
   };
 
   firebase.initializeApp(config);
-
+  lazyload();
   initTabMap();
   
   

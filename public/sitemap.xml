@@ -3,53 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-eleventh-post/</loc>
-    <lastmod>2017-08-28T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-tenth-post/</loc>
-    <lastmod>2017-08-27T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-nineth-post/</loc>
-    <lastmod>2017-08-26T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-eight-post/</loc>
-    <lastmod>2017-08-25T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-seventh-post/</loc>
-    <lastmod>2017-08-24T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-sixth-post/</loc>
-    <lastmod>2017-08-23T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-fifth-post/</loc>
-    <lastmod>2017-08-22T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-fourth-post/</loc>
-    <lastmod>2017-08-21T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-third-post/</loc>
-    <lastmod>2017-08-20T13:28:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/posts/my-second-post/</loc>
-    <lastmod>2017-08-19T13:28:11+01:00</lastmod>
+    <loc>http://www.yachtshepherdmoon.com/posts/refitting-shepherd-moon/</loc>
+    <lastmod>2017-10-19T18:48:12+01:00</lastmod>
   </url>
   
   <url>
@@ -78,7 +33,42 @@
   </url>
   
   <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_7933/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8138/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8139/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8147/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.yachtshepherdmoon.com/gallery/img_8154/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8165/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8182/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8212/</loc>
     <lastmod>2017-08-07T15:05:00+01:00</lastmod>
   </url>
   
@@ -98,8 +88,37 @@
   </url>
   
   <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8458/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_8469/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.yachtshepherdmoon.com/gallery/img_8474/</loc>
     <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_9487/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/gallery/img_9514/</loc>
+    <lastmod>2017-08-07T15:05:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.yachtshepherdmoon.com/author/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -109,13 +128,13 @@
   
   <url>
     <loc>http://www.yachtshepherdmoon.com/categories/filler/</loc>
-    <lastmod>2017-08-28T13:28:11+01:00</lastmod>
+    <lastmod>2017-10-19T18:48:12+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.yachtshepherdmoon.com/categories/fluff/</loc>
-    <lastmod>2017-08-28T13:28:11+01:00</lastmod>
+    <lastmod>2017-10-19T18:48:12+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,29 +146,19 @@
   
   <url>
     <loc>http://www.yachtshepherdmoon.com/posts/</loc>
-    <lastmod>2017-08-28T13:28:11+01:00</lastmod>
+    <lastmod>2017-10-19T18:48:12+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.yachtshepherdmoon.com/series/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yachtshepherdmoon.com/categories/website/</loc>
-    <lastmod>2017-08-24T13:28:11+01:00</lastmod>
+    <loc>http://www.yachtshepherdmoon.com/author/richard/</loc>
+    <lastmod>2017-10-19T18:48:12+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.yachtshepherdmoon.com/</loc>
-    <lastmod>2017-08-28T13:28:11+01:00</lastmod>
+    <lastmod>2017-10-19T18:48:12+01:00</lastmod>
     <priority>0</priority>
   </url>
   
