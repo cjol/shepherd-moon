@@ -1,13 +1,11 @@
 ---
 title: "My First Post"
-date: 2017-10-30 16:32Z
+date: 2017-08-22T13:28:11+01:00
 draft: false
 author: richard
 categories: ["fluff", "filler"]
 lat: 48.125035
 long: -5.427246
-hlat: "48° 7' 30.1254\" N"
-hlong: "-5° 25' 38.0856\" W"
 slat: "48° 7' N"
 slong: "5° 25' W"
 description: "Our first post with literally no information or anything helpfull at all."
