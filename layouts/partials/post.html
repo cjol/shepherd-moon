@@ -6,7 +6,7 @@
         </span>
     </div>
     <div class="post-detail post-location">
-        <a class="post-detail-text" href="https://www.google.com/maps/search/?api=1&query={{ .Params.lat }} , {{ .Params.long }}&zoom=4"><i class="icon-location-outline"></i><span class="post-location-text">{{ .Params.hlat }}, {{ .Params.hlong }}</span><span class="post-location-short">{{ .Params.slat }}, {{ .Params.slong }}</span></a>
+        <a class="post-detail-text" href="https://www.google.com/maps/search/?api=1&query={{ .Params.lat }} , {{ .Params.long }}&zoom=4"><i class="icon-location-outline"></i></span><span class="post-location-short">{{ .Params.slat }}, {{ .Params.slong }}</span></a>
     </div>
     <div class="post-detail post-catagories">
         {{ if isset .Params "categories" }}
@@ -35,4 +35,5 @@
     <div class="post-continue">
         <a href="{{ .Permalink }}"> Continue Reading <i class="icon-right-open"></i></a>
     </div>
+
 </section>

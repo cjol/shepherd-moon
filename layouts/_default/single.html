@@ -4,14 +4,32 @@
 <article class="post-single">
     <!-- A wrapper for all the blog posts -->
     <h2 class="post-title is-center">{{ .Title }}</h2>
+    <div class="post-details">
+      <span class="post-detail-text">
+      <i class="icon-user-outline"></i> {{ humanize .Params.author }}
+    </span>   
+      <span class="post-detail-text">
+            <i class="icon-clock"></i>{{ .Date.Format "02 Jan 2006, 15:04" }}
+        </span>
+        <a class="post-detail-text" href="https://www.google.com/maps/search/?api=1&query={{ .Params.lat }} , {{ .Params.long }}&zoom=4"><i class="icon-location-outline"></i></span><span class="post-location-short">{{ .Params.slat }}, {{ .Params.slong }}</span></a>
+        <div class="post-detail post-catagories">
+        {{ if isset .Params "categories" }}
+            {{ $baseUrl := .Site.BaseURL }}
+            {{ range .Params.categories }}
+                <a href="/categories/{{ . | urlize }}">
+                    <i class="icon-tag"></i> {{ . }}
+                </a> 
+            {{ end }}
+        {{ end }}
+    </div>
+    </div>
     <div class="post-content">
-    	{{ if isset .Params "description" }}
+      {{ if isset .Params "description" }}
             <div class="post-description is-center">{{ .Params.description }}</div>
         {{ end }}
 
         {{ .Content }}
     </div>
-    {{ partial "post.html" . }}
 </article>
 
 {{ partial "footer.html" . }}

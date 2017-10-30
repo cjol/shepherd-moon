@@ -5,13 +5,19 @@
 <article class="no-margin">
     <div class="grid">
     <!-- A wrapper for all the blog posts -->
-    {{ range ( shuffle .Pages) }}
+    {{ range .Pages }}
         <div class='grid-item'>
-            <img class="lazyload" src="/imgs/gallery/thumbs/{{ .File.TranslationBaseName }}.jpg" data-src="/imgs/gallery/{{ .File.TranslationBaseName }}.jpg" >
+          <a href="{{ .Permalink}}" class="caption">
+                <img class="lazyload" src="/imgs/gallery/thumbs/{{ .File.TranslationBaseName }}.jpg" data-src="/imgs/gallery/{{ .File.TranslationBaseName }}.jpg" >
+                {{ if isset .Params "description" }}
+                    <div class="gallery-description">
+                      {{ .Params.description }}
+                    </div>
+                {{ end }}
+          </a>
         </div>
     {{ end }}
 </article>
-
 {{ partial "footer.html" . }}
 {{ partial "analytics.html" . }}
 </body>
