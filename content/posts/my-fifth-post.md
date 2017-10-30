@@ -1,6 +1,6 @@
 ---
 title: "My First Post"
-date: 2017-08-22T13:28:11+01:00
+date: 2017-10-30 16:32Z
 draft: false
 author: richard
 categories: ["fluff", "filler"]

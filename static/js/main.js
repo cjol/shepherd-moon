@@ -146,18 +146,6 @@
 
 
 
-  var mapElement = $('#map');
-  function waitForMap() {
-    setTimeout(function() {
-      if ($('#map-tab').is(':visible')) {
-        initTabMap();
-      } else {
-        waitForMap();
-      }
-    }, 100);
-  }
-
-  waitForMap();
 
 }(jQuery));
 
