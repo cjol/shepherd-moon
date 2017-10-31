@@ -2,7 +2,10 @@
 {{ partial "navbar.html" . }}
 
 
-{{ partial "footer.html" . }}
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script>
+	window.onLoad = lazyload();
+</script>
 {{ partial "analytics.html" . }}
 </body>
 </html>
