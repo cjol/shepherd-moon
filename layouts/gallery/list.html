@@ -9,16 +9,14 @@
         <div class='grid-item'>
           <a href="{{ .Permalink}}" class="caption">
                 <img class="lazyload" src="/imgs/gallery/thumbs/{{ .File.TranslationBaseName }}.jpg" data-src="/imgs/gallery/{{ .File.TranslationBaseName }}.jpg" >
-                {{ if isset .Params "description" }}
-                    <div class="gallery-description">
-                      {{ .Params.description }}
-                    </div>
-                {{ end }}
           </a>
         </div>
     {{ end }}
 </article>
 {{ partial "footer.html" . }}
+<script>
+  lazyload();
+</script>
 {{ partial "analytics.html" . }}
 </body>
 </html>
