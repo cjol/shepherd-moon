@@ -194,11 +194,8 @@ $('#wave3').wavify({
 
     var mapElement = document.getElementById('map');
     map = new google.maps.Map(mapElement, mapOptions);
-    var flightPlanCoordinates
-    $.getJSON("/logbook.json", function(json) {
-        flightPlanCoordinates = 
-        console.log(json); // this will show the info it in firebug console
-    });
+
+
 
      var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
@@ -223,43 +220,8 @@ $('#wave3').wavify({
       });
 
 
-    var flightPlanCoordinates = [
-      {lat: 58.038, lng: 11.3263},
-      {lat: 56.3933, lng: 11.0355},
-      {lat: 54.4475, lng: 10.242},
-      {lat: 53.8872, lng: 7.9659},
-      {lat: 52.9092, lng: 4.3885},
-      {lat: 51.3797, lng: 1.7815},
-      {lat: 50.8748, lng: 0.9175},
-      {lat: 50.7398, lng: -0.7428},
-      {lat: 50.4813, lng: -1.542},
-      {lat: 49.6658, lng: -3.3005},
-      {lat: 48.5948, lng: -4.9888},
-      {lat: 47.9995, lng: -5.5248},
-      {lat: 45.8407, lng: -7.3567},
-      {lat: 43.5887, lng: -9.1327},
-      {lat: 42.5792, lng: -9.1698},
-      {lat: 42.318, lng: -8.8757},
-      {lat: 39.91, lng: -9.3718},
-      {lat: 39.1245, lng: -9.4368},
-      {lat: 38.4337, lng: -9.3682},
-      {lat: 36.975, lng: -8.9273},
-      {lat: 36.8557, lng: -8.8102},
-      {lat: 37.107704, lng: -8.673827},
-      {lat: 36.85566, lng: -8.81016},
-      {lat: 36.66716, lng: -8.931},
-      {lat: 36.46783, lng: -9.05116},
-      {lat: 36.27266, lng: -9.20583},
-      {lat: 36.0895, lng: -9.36183},
-      {lat: 34.778, lng: -10.4527},
-      {lat: 32.4737, lng: -12.1508},
-      {lat: 30.1897, lng: -13.9087},
-      {lat: 28.2305, lng: -15.3292},
-
-
-    ];
         var flightPath = new google.maps.Polyline({
-          path: flightPlanCoordinates,
+          path: coordinates,
           geodesic: true,
           strokeColor: '#ff5599',
           strokeOpacity: 1,
@@ -271,15 +233,19 @@ $('#wave3').wavify({
   }
 
   var config = {
-    apiKey: "<API_KEY>",
-    authDomain: "<PROJECT_ID>.firebaseapp.com",
-    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-    storageBucket: "<BUCKET>.appspot.com",
-    messagingSenderId: "<SENDER_ID>",
+    apiKey: "AIzaSyAmZ292gMrtF3TlJQqcIgKIOLADyZITyRY",
+    authDomain: "yachtshepherdmoon-47bbf.firebaseapp.com",
+    databaseURL: "https://yachtshepherdmoon-47bbf.firebaseio.com/",
   };
-
+  var coordinates = [];
   firebase.initializeApp(config);
-  lazyload();
+  var database = firebase.database();
+  firebase.database().ref('track/').orderByChild('date').on('value', function(snapshot) {
+    values.forEach(function(plot){
+      coordinates.push({lat: plot['latitude'], lng: plot['longitude']});
+    });
+  });
+
   initTabMap();
   
   
