@@ -177,76 +177,63 @@ $('#wave3').wavify({
 
 
 
-(function(){
-    
-  function initTabMap() {
-    var mapOptions = {
-      zoom: 4,
-      disableDefaultUI: false,
-      streetViewControl: false,
-      mapTypeControl: false,
-      gestureHandling: 'cooperative',
-      backgroundColor: 'hsla(0, 0%, 0%, 0)',
-      center: new google.maps.LatLng(36.4678, -8.81016),
 
-      styles: [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#eeeeee"},{"weight":0.8}]},{"featureType":"administrative.country","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"hue":"#006dff"}]},{"featureType":"administrative.country","elementType":"labels.text.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"administrative.country","elementType":"labels.text.stroke","stylers":[{"color":"#384d69"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#466083"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#eeeeee"}]}]
-    };
+var path_coordinates = [];
+var map;
+function initTabMap() {
 
-    var mapElement = document.getElementById('map');
-    map = new google.maps.Map(mapElement, mapOptions);
+  var mapOptions = {
+    zoom: 4,
+    disableDefaultUI: false,
+    streetViewControl: false,
+    mapTypeControl: false,
+    gestureHandling: 'cooperative',
+    backgroundColor: 'hsla(0, 0%, 0%, 0)',
+    center: new google.maps.LatLng(16.8865, -24.9918),
 
-
-
-     var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Las Palmas</h1>'+
-      '<div id="bodyContent">'+
-      '<img class="bodyImage" src="/imgs/gallery/img_9514.jpg"></img>' +
-      '</div>'+
-      '</div>';
-
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-
-      var marker = new google.maps.Marker({
-        position: {lat: 28.127461, lng: -15.425689},
-        map: map,
-        title: 'Las Palmas'
-      });
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-
-
-        var flightPath = new google.maps.Polyline({
-          path: coordinates,
-          geodesic: true,
-          strokeColor: '#ff5599',
-          strokeOpacity: 1,
-          strokeWeight: 2
-        });
-
-        flightPath.setMap(map);
-
-  }
-
-  var config = {
-    apiKey: "AIzaSyAmZ292gMrtF3TlJQqcIgKIOLADyZITyRY",
-    authDomain: "yachtshepherdmoon-47bbf.firebaseapp.com",
-    databaseURL: "https://yachtshepherdmoon-47bbf.firebaseio.com/",
+    styles: [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#eeeeee"},{"weight":0.8}]},{"featureType":"administrative.country","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"hue":"#006dff"}]},{"featureType":"administrative.country","elementType":"labels.text.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"administrative.country","elementType":"labels.text.stroke","stylers":[{"color":"#384d69"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#466083"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#eeeeee"}]}]
   };
-  var coordinates = [];
-  firebase.initializeApp(config);
-  var database = firebase.database();
-  firebase.database().ref('track/').orderByChild('date').on('value', function(snapshot) {
-    values.forEach(function(plot){
-      coordinates.push({lat: plot['latitude'], lng: plot['longitude']});
-    });
-  });
 
+  var mapElement = document.getElementById('map');
+  map = new google.maps.Map(mapElement, mapOptions);
+}
+
+window.onload = function() {
   initTabMap();
+};
+    
+
+var config = {
+  apiKey: "AIzaSyAmZ292gMrtF3TlJQqcIgKIOLADyZITyRY",
+  authDomain: "yachtshepherdmoon-47bbf.firebaseapp.com",
+  databaseURL: "https://yachtshepherdmoon-47bbf.firebaseio.com/",
+};  
+var coordinates = [];
+firebase.initializeApp(config);
+var database = firebase.database();
+database.ref('/track').orderByChild('date').on('value', function(snapshot){
+var values = snapshot.val();
+
+for (var key in values) {
+    // skip loop if the property is from prototype
+    if (!values.hasOwnProperty(key)) continue;
+    var obj = values[key];
+    coordinates.push({lat: parseFloat(obj['latitude']), lng: parseFloat(obj['longitude'])});
+}
+
+var last = coordinates[coordinates.length-1]
+var current_loc = new google.maps.LatLng(last['latitude'], last['longitude'])
+var sailPath = new google.maps.Polyline({
+  path: coordinates,
+  geodesic: true,
+  strokeColor: '#ff5599',
+  strokeOpacity: 1,
+  strokeWeight: 2
+});
+
+sailPath.setMap(map);
+  
+  
   
   
 })();
