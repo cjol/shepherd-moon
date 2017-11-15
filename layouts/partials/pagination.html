@@ -1,16 +1,1 @@
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-<div class="pagination input-group">
-  {{ if .Paginator.HasPrev }}
-    <a href="{{.Paginator.Prev.URL}}" class="input-group-btn">
-        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
-      </a>
-      {{ end }}
-    <div class="input-group-txt">Page {{.Paginator.PageNumber}} of {{.Paginator.TotalPages}}</div>
-    {{ if .Paginator.HasNext }}
-      <a href="{{.Paginator.Next.URL}}" class="input-group-btn">
-        Older&nbsp;<i class="fa fa-angle-double-right"></i>
-      </a>
-    {{ end }}
-  </nav>
-</div>
-{{ end }}
+<div></div>
