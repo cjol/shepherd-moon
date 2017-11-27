@@ -1,7 +1,7 @@
 baseurl = "http://www.yachtshepherdmoon.com"
 languageCode = "en-gb"
 title = "Yacht Shepherd Moon"
-Paginate = 3
+Paginate = 50
 
 
 
